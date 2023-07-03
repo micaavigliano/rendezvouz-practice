@@ -9,9 +9,7 @@ reversedSquares = (num) => {
         .join("")
     const toNum = reversedSqrNum.length > 1 ? Math.sqrt(Number(reversedSqrNum)) : null
 
-    if (Number.isInteger(sqrNum) && toNum === null) {
-        return true
-    } else if (Number.isInteger(sqrNum) && Number.isInteger(toNum)){
+    if ((Number.isInteger(sqrNum) && toNum === null) || (Number.isInteger(sqrNum) && Number.isInteger(toNum))) {
         return true
     }
     return false

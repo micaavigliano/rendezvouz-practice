@@ -12,6 +12,10 @@ reversedSquares = (num) => {
     if ((Number.isInteger(sqrNum) && toNum === null) || (Number.isInteger(sqrNum) && Number.isInteger(toNum))) {
         return true
     }
+
+    if (!Number.isSafeInteger(num)) {
+        return 'not an integer >:( try with a whole number from -9223372036854775808 to +9223372036854775807 o.o'
+    }
     return false
 }
 
@@ -21,3 +25,4 @@ console.log(reversedSquares(25))
 console.log(reversedSquares(100))
 console.log(reversedSquares(150))
 console.log(reversedSquares(900))
+console.log(reversedSquares(1.500))
